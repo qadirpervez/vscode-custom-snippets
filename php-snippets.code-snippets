@@ -1,0 +1,420 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	// copied from https://github.com/h4kst3r/php-awesome-snippets but customised the prefix
+	// functions
+	"Function": {
+		"scope": "php",
+		"prefix": "func",
+		"body": [
+			"function ${1:func_name}(${2:Type} \\$${3:args}): ${4:void} {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Function block"
+	},
+	"Anonymous function": {
+		"scope": "php",
+		"prefix": "func",
+		"body": [
+			"function (${1:Type} \\$${2:args}): ${3:void} {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Anonymous function block"
+	},
+	"Anonymous function ... use": {
+		"scope": "php",
+		"prefix": "funcu",
+		"body": [
+			"function (${1:Type} \\$${2:args}) use (\\$${3:vars}): ${4:void} {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Anonymous function with use block"
+	},
+	// classes
+	"Class": {
+		"scope": "php",
+		"prefix": "class",
+		"body": ["class ${1:ClassName}", "{", "\t${0:# code...}", "}"],
+		"description": "PHP Class block"
+	},
+	"Class extends": {
+		"scope": "php",
+		"prefix": "classe",
+		"body": [
+			"class ${1:ClassName} extends ${2:MotherClass}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class extends block"
+	},
+	"Class implements": {
+		"scope": "php",
+		"prefix": "classi",
+		"body": [
+			"class ${1:ClassName} implements ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class implements block"
+	},
+	"Class extends implements": {
+		"scope": "php",
+		"prefix": "classei",
+		"body": [
+			"class ${1:ClassName} extends ${2:MotherClass} implements ${3:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class extends and implements block"
+	},
+	"Abstract class": {
+		"scope": "php",
+		"prefix": "aclass",
+		"body": ["abstract class ${1:ClassName}", "{", "\t${0:# code...}", "}"],
+		"description": "PHP abstract Class block"
+	},
+	"Abstract class extends": {
+		"scope": "php",
+		"prefix": "aclasse",
+		"body": [
+			"abstract class ${1:ClassName} extends ${2:MotherClass}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class extends block"
+	},
+	"Abstract class implements": {
+		"scope": "php",
+		"prefix": "aclassi",
+		"body": [
+			"abstract class ${1:ClassName} implements ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class implements block"
+	},
+	"Abstract class extends implements": {
+		"scope": "php",
+		"prefix": "aclassei",
+		"body": [
+			"abstract class ${1:ClassName} extends ${2:MotherClass} implements ${3:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class extends and implements block"
+	},
+	"Final class": {
+		"scope": "php",
+		"prefix": "fclass",
+		"body": ["final class ${1:ClassName}", "{", "\t${0:# code...}", "}"],
+		"description": "PHP final Class block"
+	},
+	"Final class extends": {
+		"scope": "php",
+		"prefix": "fclasse",
+		"body": [
+			"final class ${1:ClassName} extends ${2:MotherClass}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class extends block"
+	},
+	"Final class implements": {
+		"scope": "php",
+		"prefix": "fclassi",
+		"body": [
+			"final class ${1:ClassName} implements ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class implements block"
+	},
+	"Final class extends implements": {
+		"scope": "php",
+		"prefix": "fclassei",
+		"body": [
+			"final class ${1:ClassName} extends ${2:MotherClass} implements ${3:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class extends and implements block"
+	},
+	"Interface": {
+		"scope": "php",
+		"prefix": "in",
+		"body": ["interface ${1:InterfaceName}", "{", "\t${0:# code...}", "}"],
+		"description": "PHP Interface block"
+	},
+	"Interface extends": {
+		"scope": "php",
+		"prefix": "ine",
+		"body": [
+			"interface ${1:InterfaceName} extends ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Interface extends block"
+	},
+	"Trait": {
+		"scope": "php",
+		"prefix": "tra",
+		"body": ["trait ${1:TraitName}", "{", "\t${0:# code...}", "}"],
+		"description": "PHP Trait block"
+	},
+	// if else
+	"If block": {
+		"scope": "php",
+		"prefix": "if",
+		"body": ["if (${1:condition}) {", "\t${0:# code...}", "}"],
+		"description": "If  block"
+	},
+	"If ... else": {
+		"scope": "php",
+		"prefix": "ife",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2:# code...}",
+			"} else {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "If else block"
+	},
+	"If ... elseif ... else": {
+		"scope": "php",
+		"prefix": "ifef",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2:# code...}",
+			"} elseif (${3:condition}) {",
+			"\t${4:# code...}",
+			"} else {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "If elseif else block"
+	},
+	"Switch block": {
+		"scope": "php",
+		"prefix": "sw",
+		"body": [
+			"switch (\\$${1:variable}) {",
+			"\tcase '${2:label}':",
+			"\t\t${3:# code...}",
+			"\t\tbreak;",
+			"\tcase '${4:label}':",
+			"\t\t${5:# code...}",
+			"\t\tbreak;$6",
+			"\tdefault:",
+			"\t\t${0:# code...}",
+			"\t\tbreak;",
+			"}"
+		],
+		"description": "Switch block"
+	},
+	"Case statement": {
+		"scope": "php",
+		"prefix": "case",
+		"body": ["case '${1:label}':", "\t${2:# code...}", "\tbreak;"],
+		"description": "Case addon block"
+	},
+	"Ternary operator": {
+		"scope": "php",
+		"prefix": "tern",
+		"body": ["${1:condition} ? ${2:if_true} : ${3:if_false};"],
+		"description": "Ternary statement"
+	},
+	// try catch
+	"Try ... catch": {
+		"scope": "php",
+		"prefix": "try",
+		"body": [
+			"try {",
+			"\t${1:# code...}",
+			"} catch (${2:\\Throwable} \\$${3:e}) {",
+			"\t${4:# code...}",
+			"}"
+		],
+		"description": "Try catch block"
+	},
+	"Try ... catch ... finally": {
+		"scope": "php",
+		"prefix": "tryf",
+		"body": [
+			"try {",
+			"\t${1:# code...}",
+			"} catch (${2:\\Throwable} \\$${3:e}) {",
+			"\t${4:# code...}",
+			"}$5 finally {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Try catch finally block"
+	},
+	"Catch": {
+		"scope": "php",
+		"prefix": "cat",
+		"body": ["catch (${1:\\Throwable} \\$${2:e}) {", "\t${3:# code...}", "}"],
+		"description": "Catch block"
+	},
+	"Finally": {
+		"scope": "php",
+		"prefix": "fin",
+		"body": ["finally {", "\t${0:# code...}", "}"],
+		"description": "Finally block"
+	},
+	"Throw new Exception": {
+		"scope": "php",
+		"prefix": "thr",
+		"body": ["throw new ${1:Some}Exception(\"${2:Error statement}\");"],
+		"description": "Throw new exception statement"
+	},
+	// Arrays
+	"Array": {
+		"scope": "php",
+		"prefix": "arr",
+		"body": ["[${1:value}, ${2:value}, $3];"],
+		"description": "Array [] block"
+	},
+	"Array key ... value": {
+		"scope": "php",
+		"prefix": "arrk",
+		"body": [
+			"[",
+			"\t'${1:key}' => ${2:value},",
+			"\t'${3:key}' => ${4:value},$5",
+			"]"
+		],
+		"description": "Array [] key => value block"
+	},
+	// class methods
+	"Class constructor": {
+		"scope": "php",
+		"prefix": "cons",
+		"body": [
+			"public function __construct(${1:Type} \\$${2:args})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Class public constructor block"
+	},
+	"Private method": {
+		"scope": "php",
+		"prefix": "funcpriv",
+		"body": [
+			"private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Private method block"
+	},
+	"Public method": {
+		"scope": "php",
+		"prefix": "funcp",
+		"body": [
+			"public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Public method block"
+	},
+	"Public static method": {
+		"scope": "php",
+		"prefix": "funcsta",
+		"body": [
+			"public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Public static method block"
+	},
+	// foreach
+	"Foreach loop": {
+		"scope": "php",
+		"prefix": "fore",
+		"body": [
+			"foreach (\\$${1:iterable} as \\$${2:item}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Foreach as $item block"
+	},
+	"Foreach ... key ... item": {
+		"scope": "php",
+		"prefix": "forek",
+		"body": [
+			"foreach (\\$${1:iterable} as \\$${2:key} => \\$${3:item}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Foreach as $key => $item block"
+	},
+	"For loop": {
+		"scope": "php",
+		"prefix": "forl",
+		"body": [
+			"for (\\$${1:i} = ${2:0}; \\$${1:i} < \\$${3:limit}; \\$${1:i}++) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "For loop"
+	},
+	"While loop": {
+		"scope": "php",
+		"prefix": "whi",
+		"body": [
+			"while (\\$${1:variable} ${2:<=} \\$${3:limit}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "While loop"
+	},
+	"Do ... while": {
+		"scope": "php",
+		"prefix": "dowh",
+		"body": [
+			"do {",
+			"\t${0:# code...}",
+			"} while (\\$${1:variable} ${2:<=} \\$${3:limit});"
+		],
+		"description": "Do while loop"
+	},
+	//  comment
+	"Comment": {
+		"scope": "php",
+		"prefix": "com",
+		"body": ["/**", "* $1.", "*", "* @return $0", "*/"],
+		"description": "Adds Multiline Comments"
+	}
+}

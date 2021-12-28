@@ -1,0 +1,57 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Console Log": {
+		"scope": "javascript,typescript",
+		"prefix": "l",
+		"body": ["console.log('$0')"]
+	},
+	"Destructure": {
+		"scope": "javascript,typescript",
+		"prefix": "d",
+		"body": ["const { $1 } = $0"]
+	},
+	"Try/Catch": {
+		"scope": "javascript,typescript",
+		"prefix": "try",
+		"body": ["try {", "  $1", "} catch (e) {", "  console.log(e)", "}"]
+	},
+	"Comment": {
+		"scope": "javascript,typescript",
+		"prefix": "c",
+		"body": ["/**", " * $1.", " */"]
+	},
+	"Function": {
+		"scope": "javascript,typescript",
+		"prefix": "f",
+		"body": ["/**", " * $1 $2.", " */", "", "const $1 = ($2) => {", "  $0", "}"]
+	},
+	"Async Function": {
+		"scope": "javascript,typescript",
+		"prefix": "af",
+		"body": [
+			"/**",
+			" * $1 $2.",
+			" */",
+			"",
+			"const $1 = async($2) => {",
+			"  $0",
+			"}"
+		]
+	},
+	"Require": {
+		"scope": "javascript,typescript",
+		"prefix": "re",
+		"body": ["const $1 = require('$0')"]
+	},
+	"Export": {
+		"scope": "javascript,typescript",
+		"prefix": "ex",
+		"body": ["/**", " * $1 $2.", " */", "", "module.exports = $0 "]
+	}
+}
